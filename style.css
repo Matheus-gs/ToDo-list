@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+}
+
+/* Tela */
+#app {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  /* background-color: #111; */
+}
+
+/* Titulo */
+
+span {
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  justify-self: center;
+  color: #555;
+}
+
+span i {
+  color: rgb(35, 142, 230);
+}
+
+/* Input */
+#inputTask {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 12vh;
+}
+
+#inputTask input {
+  width: 89%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 0 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+#inputTask button {
+  width: 10%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  background: rgb(35, 142, 230);
+  color: white;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+
+  transition: filter 0.5s ease;
+}
+
+#inputTask button:hover {
+  filter: brightness(0.9);
+}
+
+/* Lista */
+
+#taskList {
+  width: 80%;
+  height: 65vh;
+
+  border-radius: 10px;
+
+  position: absolute;
+  bottom: 7vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+
+  overflow: auto;
+}
+
+#taskList li {
+  width: 280px;
+  height: 150px;
+  border-radius: 10px;
+
+  margin: 15px;
+  padding: 25px 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  font-size: 22px;
+
+  position: relative;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+#taskList li #featuresDiv {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(40, 213, 152);
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#taskList li #featuresDiv a {
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  #inputTask {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10vh;
+  }
+
+  #inputTask button {
+    width: 50%;
+    height: 40px;
+    margin: 10px;
+  }
+  #taskList {
+    bottom: 5vh;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer p{
+    font-size:14px;
+}
+
+footer p a{
+    color: rgb(40, 213, 152);
+    text-decoration: underline;
+}
