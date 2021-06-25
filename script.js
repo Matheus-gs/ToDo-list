@@ -8,6 +8,8 @@ function addTask() {
     // input
     const inputTask = document.querySelector("form input")
 
+
+
     // Lista
     const taskList = document.querySelector("ul")
 
@@ -43,17 +45,27 @@ function addTask() {
     // checkButton.textContent = "V"
 
 
-    // mostrando na tela
-    taskList.appendChild(task)
-    task.append(inputTask.value)
-    task.append(featuresDiv)
-    featuresDiv.append(removeButton)
-    featuresDiv.append(editButton)
-    featuresDiv.append(checkButton)
+    // Verificando se o input ta vazio ou não
+    if (inputTask.value === '') {
+        alert("Insira uma tarefa")
+    } else {
+
+        // mostrando na tela
+        taskList.appendChild(task)
+        task.append(inputTask.value)
+        task.append(featuresDiv)
+        featuresDiv.append(removeButton)
+        featuresDiv.append(editButton)
+        featuresDiv.append(checkButton)
+    }
+
 
     // debugging
-    console.log(inputTask.value)
-    console.log(task)
+    // console.log(inputTask.value)
+    // console.log(task)
+
+    // Limpando o input depois do envio
+    inputTask.value = ''
 }
 
 // Apagando a task
